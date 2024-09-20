@@ -147,6 +147,70 @@ int main() {
 
     printf("Result: %.2lf\n", result);
     return 0;
+
+    \subsection{Compiling and Running the Program}
+To compile and run the calculator program:
+\begin{enumerate}
+    \item Open a terminal or command prompt.
+    \item Navigate to the directory where the C file is located.
+    \item Compile the program using a C compiler (e.g., GCC):
+    \begin{verbatim}
+    gcc calculator.c -o calculator
+    \end{verbatim}
+    \item Run the compiled program:
+    \begin{verbatim}
+    ./calculator
+    \end{verbatim}
+\end{enumerate}
+
+\subsection{Adding the Calculator Program to GitHub Repository}
+To add this calculator program to a GitHub repository, follow these steps:
+
+\subsubsection{Step 1: Initialize a Local Git Repository}
+\begin{enumerate}
+    \item Open the terminal and navigate to the directory where your \texttt{calculator.c} file is located.
+    \item If you haven't already, initialize a Git repository in that directory:
+    \begin{verbatim}
+    git init
+    \end{verbatim}
+    This command creates a new Git repository in the current directory.
+\end{enumerate}
+
+\subsubsection{Step 2: Add the File to the Repository}
+\begin{enumerate}
+    \item Add the \texttt{calculator.c} file to the staging area:
+    \begin{verbatim}
+    git add calculator.c
+    \end{verbatim}
+    This command stages the file, indicating that you want to include it in the next commit.
+\end{enumerate}
+
+\subsubsection{Step 3: Commit the Changes}
+\begin{enumerate}
+    \item Commit the file to the repository with a meaningful message:
+    \begin{verbatim}
+    git commit -m "Add calculator program in C"
+    \end{verbatim}
+\end{enumerate}
+
+\subsubsection{Step 4: Push the Changes to GitHub}
+\begin{enumerate}
+    \item Link your local repository to a remote GitHub repository:
+    \begin{verbatim}
+    git remote add origin https://github.com/yourusername/your-repo-name.git
+    \end{verbatim}
+    \item Push the changes to the GitHub repository:
+    \begin{verbatim}
+    git push -u origin master
+    \end{verbatim}
+\end{enumerate}
+
+\subsubsection{Step 5: Verify the Upload}
+\begin{enumerate}
+    \item Go to your GitHub repository URL in a web browser.
+    \item Verify that the \texttt{calculator.c} file is listed and accessible in the repository.
+\end{enumerate}
+
 }
 \end{verbatim}
 
