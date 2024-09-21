@@ -265,4 +265,141 @@ submitButton.setCursor(new Cursor(Cursor.HAND_CURSOR)); // Change cursor when ho
 These modifications include changing the button's label to \texttt{"Chin Tapak Dum Dum"}, resizing the button, adjusting the font style, and altering the button's color scheme to enhance its appearance and usability.
 
  \end{itemize}
-    
+ \section{ Introduction to \LaTeX}
+
+\subsection{Abstract}
+This document serves as a brief introduction to \LaTeX, a widely-used typesetting system. 
+    It covers the basics of document structure, formatting, mathematical typesetting, and features 
+    like cross-referencing, tables, and figure handling.
+
+\subsection{What is \LaTeX ?}    
+\LaTeX\ is a high-quality typesetting system that is widely used for producing scientific and technical
+documents. It is not a word processor; instead, \LaTeX\ allows authors to focus on content rather
+than design, with an emphasis on logical structure. Developed in the 1980s by Leslie Lamport,
+\LaTeX\ builds on Donald Knuth’s \TeX, adding macros to simplify document production.\\
+
+
+A few key features of \LaTeX\ include:
+\begin{itemize}
+    \item Automatic generation of bibliographies, indexes, and tables of contents.
+    \item Handling complex mathematical notations.
+    \item Consistent and professional typography.
+    \item Easy cross-referencing of sections, equations, and figures.
+\end{itemize}
+
+\subsection{Document Structure}
+Every \LaTeX\ document begins with a document class declaration, which determines the overall
+layout. Some common classes are \texttt{article}, \texttt{report}, and \texttt{book}. The document itself is enclosed
+between \verb|\begin{document}| and \verb|\end{document}|.\\
+
+
+Here’s an example of a very simple \LaTeX\ document:
+\begin{verbatim}
+\documentclass{article}
+\begin{document}
+    \title{Sample Document}
+    \author{Author Name}
+    \date{\today}
+    \maketitle
+    \section{Introduction}
+    This is the introduction to our document.
+\end{document}
+\end{verbatim}
+
+You can add sections, subsections, and paragraphs to structure your document logically. \LaTeX\
+automatically numbers sections and subsections for you.
+
+\subsubsection{The Preamble}
+The preamble is the part of the document before \verb|\begin{document}|. Here, you can load packages
+to extend \LaTeX's functionality, set global formatting options, and define custom commands.\\
+
+
+Example of including a package:
+\begin{verbatim}
+\usepackage{amsmath} % For advanced math typesetting
+\end{verbatim}
+
+\subsection{Mathematical Typesetting}
+\LaTeX\ excels at typesetting mathematical equations, both inline and as standalone expressions. Inline math is written within \verb|$| symbols, like this: $a^2 + b^2 = c^2$. For larger expressions, the \texttt{equation} environment is used.\\
+
+
+For example, here’s the quadratic formula:
+
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} 
+\]
+
+\subsubsection{Dotted Expressions}
+Dots are often used to indicate that a pattern continues. You can use different types of dots for
+various purposes in mathematical typesetting:
+\[
+1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}
+\]
+\[
+A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\ 
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{pmatrix}
+\]
+In the matrix example, \vdots represents\ vertical\ dots,\ddots represent\ diagonal\ dots, \cdots represents\ horizontal\ dots. 
+
+\subsection{Inserting Figures and Tables}
+Including images and tables is simple in \LaTeX. For figures, you use the \texttt{figure} environment and
+the \verb|\includegraphics| command.
+
+Here is an example of how to insert a figure:
+\begin{verbatim}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{image1.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+\end{verbatim}
+        
+
+Tables are created using the \texttt{table} and \texttt{tabular} environments. For example:
+\begin{verbatim}
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        \hline
+    \end{tabular}
+    \caption{A simple table.}
+    \label{tab:example}
+\end{table}
+\end{verbatim}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        \hline
+    \end{tabular}
+    \caption{A simple table.}
+    \label{tab:example}
+\end{table}
+
+\subsection{Cross-Referencing and Citations}
+\LaTeX\ provides robust tools for cross-referencing sections, equations, and figures. For example, to reference Figure 1, use the \verb|\ref| command. You can also automatically generate a bibliography by
+using \verb|BibTeX| or \verb|BibLaTeX|.
+
+\subsection{Compiling the Document}
+To see the formatted output of your \LaTeX\ document, you need to compile it. The most common
+compiler is \texttt{pdflatex}, which generates a PDF from your \LaTeX\ source code. Online editors like \textbf{ Overleaf} provide a user-friendly interface for compiling and editing \LaTeX\ documents.
+
+\subsection{Conclusion}
+This brief introduction to \LaTeX\ covers its fundamental concepts and features. As you become more comfortable, you can explore advanced topics such as custom commands, style files, and the extensive array of packages available for \LaTeX. It is a powerful tool that ensures professional, consistent document formatting, making it a favorite for researchers, scientists, and academic writers.
+
+\end{document}   
